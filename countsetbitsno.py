@@ -1,0 +1,5 @@
+n=int(input())
+n1=bin(n)
+res=str(n1)
+ct=res.count('1')
+print(ct)
