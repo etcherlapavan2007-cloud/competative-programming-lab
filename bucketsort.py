@@ -10,4 +10,4 @@ res = []
 for j in buckets:
     j.sort()
     res.extend(j)
-print(*["{:.2f}".format(x) for x in res])
+print(*res)
