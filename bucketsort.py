@@ -10,9 +10,9 @@ for i in arr:
         index = n - 1
     buckets[index].append(i)
 res = []
-for bucket in buckets:
-    bucket.sort()
-    res.extend(bucket)
+for j in buckets:
+    j.sort()
+    res.extend(j)
 for x in res:
     if x.is_integer():
         print(int(x), end=" ")
