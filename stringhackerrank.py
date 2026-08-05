@@ -1,6 +1,12 @@
-s1=input()
-maxi,ct=0,0
-for i in s1:
-    ct=s1.count(i)
-    maxi=max(maxi,ct)
-print(maxi)
+s=input()
+s1=s[::-1]
+m=len(s)
+n=len(s1)
+dp=[[0]*(n+1) for i in range(m+1)]
+for i in range(1,m+1):
+    for j in range(1,n+1):
+        if s[i-1]==s1[j-1]:
+            dp[i][j]=1+dp[i-1][j-1]
+        else:
+            dp[i][j]=max(dp[i-1][j],dp[i][j-1])
+print(dp[i][j])
